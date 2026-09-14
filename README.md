@@ -1,62 +1,45 @@
-# Dev Portfolio — تطبيق Flutter
+# Mohmd Saleem — Flutter Developer Portfolio
 
-تطبيق Portfolio شخصي بهوية بصرية مستوحاة من محرر الأكواد (IDE):
-خلفية كحلي غامق، لون تمييز كهرماني/نعناعي، وعناصر على شكل نوافذ Terminal بدل الكروت التقليدية.
+A personal portfolio website showcasing my experience, skills, and projects as a **Flutter Developer**.
 
-## التشغيل
-```bash
-flutter pub get
-flutter run
-```
+## About
 
-## هيكل المشروع
-```
-lib/
-  main.dart              # نقطة الدخول + شريط التنقل السفلي (بأسلوب تبويبات الملفات)
-  theme/app_theme.dart    # الألوان والخطوط (JetBrains Mono + Inter)
-  models/project.dart     # بيانات المشاريع - عدّلها ببياناتك
-  screens/
-    home_screen.dart      # نبذة عنك
-    projects_screen.dart  # قائمة المشاريع
-    skills_screen.dart    # المهارات مع أشرطة تقدم
-    contact_screen.dart   # روابط التواصل
-  widgets/
-    terminal_block.dart   # ويدجت قابل لإعادة الاستخدام بشكل نافذة Terminal
-    project_card.dart     # بطاقة عرض مشروع واحد
-```
+I'm a Flutter Developer focused on building modern, scalable, and high-performance mobile applications. I have experience developing production-ready applications across different domains, including delivery, e-commerce, roadside assistance, sports, and service marketplaces.
 
-## قبل النشر — عدّل هذه الأشياء
-1. **lib/screens/home_screen.dart**: اسمك، النبذة التعريفية، الإحصائيات.
-2. **lib/models/project.dart**: مشاريعك الحقيقية وروابط GitHub.
-3. **lib/screens/contact_screen.dart**: روابطك الفعلية (GitHub, LinkedIn, Email, WhatsApp).
-4. أضف أيقونة التطبيق (`flutter_launcher_icons`) وشاشة splash إذا حبيت.
+## Tech Stack
 
-## النشر على Firebase Hosting (جاهز بالمشروع)
+* **Flutter & Dart**
+* **BLoC / Riverpod / Provider**
+* **Clean Architecture**
+* **REST APIs**
+* **Firebase**
+* **WebSocket**
+* **SQLite / Realm**
+* **Git & GitHub**
 
-الملفات `firebase.json` و `.firebaserc` و `.github/workflows/firebase-hosting.yml` موجودة مسبقاً. خطوات التفعيل:
+## Featured Projects
 
-### نشر يدوي (أول مرة)
-```bash
-npm install -g firebase-tools
-firebase login
-```
-1. افتح `.firebaserc` وبدّل `REPLACE_WITH_YOUR_FIREBASE_PROJECT_ID` بمعرّف مشروعك من [Firebase Console](https://console.firebase.google.com).
-2. ابنِ ونشر:
-```bash
-flutter build web --release
-firebase deploy
-```
-رح تحصل على رابط مباشر مثل `your-project.web.app`.
+The portfolio showcases several production applications, including:
 
-### نشر تلقائي (CI/CD عبر GitHub Actions)
-الملف `.github/workflows/firebase-hosting.yml` بينشر تلقائياً كل ما تعمل push على branch `main`. تحتاج تجهّز:
+* **DeliverIt** — Food and grocery delivery platform
+* **DeliverIt Partner** — Merchant management application
+* **DeliverIt Driver** — Driver delivery application
+* **Dr.Service** — On-demand roadside assistance platform
+* **Dr.Service Driver** — Service provider application
+* **Cleanova** — Cleaning services marketplace
+* **GoOOolak** — Football pitch booking and player community platform
+* **Hiaibox** — Community platform for truck drivers
 
-1. **استبدل** `REPLACE_WITH_YOUR_FIREBASE_PROJECT_ID` داخل ملف الـ workflow بمعرّف مشروعك.
-2. **أنشئ Service Account Key** من Firebase Console:
-   - Project Settings → Service Accounts → Generate New Private Key
-3. **أضف السر بـ GitHub**: Repo → Settings → Secrets and variables → Actions → New repository secret
-   - الاسم: `FIREBASE_SERVICE_ACCOUNT`
-   - القيمة: محتوى ملف الـ JSON اللي نزلته بالخطوة السابقة (انسخه كامل)
-4. اعمل push للكود على branch `main` — أول build وdeploy رح يصير تلقائياً.
+## Portfolio
 
-بعدها أي تعديل تعمله وتعمله push، رح ينعكس على الموقع خلال دقائق بدون ما تكتب أي أمر يدوي.
+🌐 **Live Portfolio:**
+https://mohmd1992.github.io/portfolio_app/
+
+## Contact
+
+* **Email:** [mohmd_saleem1992@yahoo.com](mailto:mohmd_saleem1992@yahoo.com)
+* **LinkedIn:** https://www.linkedin.com/in/mohmd-saleem-777140162/
+
+---
+
+Built with ❤️ using **Flutter Web**.
